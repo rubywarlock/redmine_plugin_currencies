@@ -1,0 +1,22 @@
+h2 Валютный информер
+
+div class="autoscroll"
+  table class="list"
+    thead
+      tr
+        th class="currency" валюта
+        th class="name" код
+        th class="code" цена
+        th class="datetime" обновлено
+
+    tbody
+      - @currencies.each_with_index do |currency, index|
+        tr class="#{ ('currency-list-odd' if index.even?) }"
+          td
+            = currency.name
+          td
+            = currency.code
+          td
+            = currency.rate
+          td
+            = time_ago_in_words currency.updated_at
