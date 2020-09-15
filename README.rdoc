@@ -1,3 +1,4 @@
-= currency_informer
+Тестовое задание
+Педмайн плагин
 
-Description goes here
+Показывает валютный информер
